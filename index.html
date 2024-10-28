@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+     <link rel="shortcut icon" href="images/logo (1).png" type="image/x-icon">
+     <!-- font style -->
+
+      <!-- fontawsome -->
+       <link rel="stylesheet" href="css/all.min.css">
+       <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- main stylesheet -->
+       <link rel="stylesheet" href="css/style.css">
+    <title>Yummy</title>
+</head>
+<body>
+
+    <!-- loading -->
+     <div class="loading d-none">
+        <span class="loader"></span>
+     </div>
+<!-- side bar -->
+    <aside class="d-flex  vh-100">
+<div class="links">
+    <nav class="p-4 h-100">
+        <ul class="list-unstyled">
+            <li class="py-2"><a href="#search" class="text-white text-decoration-none nav-link">Search</a></li>
+            <li class="py-2"><a href="#categories" class="text-white text-decoration-none nav-link">Categories</a></li>
+            <li class="py-2"><a href="#area" class="text-white text-decoration-none nav-link">Area</a></li>
+            <li class="py-2"><a href="#ingrediants" class="text-white text-decoration-none nav-link">Ingredients</a></li>
+            <li class="py-2"><a href="#contact" class="text-white text-decoration-none nav-link">Contact Us</a></li>
+        </ul>
+        <div class="social-copyright">
+            <div class="icons">
+               <a href="#"><i class="fa-brands fa-facebook text-white"></i></a>
+               <a href="#"><i class="fa-brands fa-twitter text-white"></i></a>
+               <a href="#"><i class="fa-solid fa-globe text-white"></i></a>
+            </div>
+            <p class="text-white copyright">Copyright Â© 2019 All Rights
+                <br>
+                Reserved.</p>
+        </div>
+        </nav>
+</div>
+
+        <div class="bg-white d-flex flex-column justify-content-between px-2 py-4 align-items-center">
+            <img src="images/logo (1).png" alt="logo" >
+            <i class="fa-solid fa-bars text-black bars "></i>
+            <div class="icons">
+               <a href="#"> <i class="fa-solid fa-globe d-block text-black"></i></a>
+               <a href="#"><i class="fa-solid fa-share-nodes text-black"></i></a>
+            </div>
+        </div>
+    </aside>
+<!-- first load page random meals -->
+    <main>
+        <div class="container py-5">
+          <div class="row g-4" id="randomMeals">
+               
+            </div>
+            <div class="row d-none" id="mealDetails">
+            
+            </div>
+        </div>
+    </main>
+
+<!-- search page  -->
+    <section id="search" class="d-none ">
+<div class="container overflow-hidden">
+  
+    <div class="row g-4 py-5" id="searchInputsRow" >
+       <div class="inputs d-flex   justify-content-center col-md-12 g-4 ">
+   <div class="col-md-5">
+            <input type="text" class="form-control name"placeholder='Search By Name'>
+        </div>
+        <div class="col-md-5">
+            <input type="text" class="form-control letter" placeholder='Search By First Letter'>
+        </div>      
+       </div>
+
+     
+    </div>
+    <div class="row g-4" id="searchMealsByName">
+       
+    </div>
+    <div class="row d-none py-5" id="searchMealDetails">
+     
+    </div>
+</div>
+    </section>
+
+<!-- categories /area /ingerdiants -->
+    <section id="content" class="d-none">
+        <div class="container pt-5">
+            <div class="row text-center g-4 " id="CaregoriesAreasIngrediants"></div>
+            <div class="row g-4" id="meals"></div>
+            <div class="row d-none" id="details"></div>
+        </div>
+    </section>
+
+<!-- contact page  -->
+    <section class="contact d-none min-vh-100 d-flex justify-content-center align-items-center">
+<div class="container ">
+    <form class="row g-4">
+        <div class="col-md-6">
+          <input type="text" class="form-control  input "  placeholder='Enter Your Name'id='name' name='name'> 
+          <div class="alert alert-danger mt-2 d-none">Special characters and numbers not allowed</div>
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control input" placeholder="Enter Your Email" id="email" name='email'>
+          <div class="alert alert-danger mt-2 d-none">Email not valid *exemple@yyy.zzz        </div>
+        </div>
+        <div class="col-md-6">
+          <input type="phone" class="form-control input" placeholder="Enter Your Phone"id='phone' name='phone'>
+          <div class="alert alert-danger mt-2 d-none">Enter valid Phone Number</div>
+        </div>
+        <div class="col-md-6">
+          <input type="number" class="form-control input" placeholder="Enter Your Age"id='age' name='age'>
+          <div class="alert alert-danger mt-2 d-none">Enter valid age</div>
+        </div>
+        <div class="col-md-6">
+          <input type="password" class="form-control input" placeholder="Enter Your Passward"id='password' name='password'>
+          <div class="alert alert-danger mt-2 d-none text-center">Enter valid password *Minimum eight characters, at least one letter and one number:*</div>
+        </div>
+    
+        <div class="col-md-6">
+          <input type="password" class="form-control" placeholder="Repassward" id="repassword" name='repassword'>
+          <div class="alert alert-danger mt-2 d-none">Enter valid repassword</div>
+        </div>
+    <button class="btn btn-outline-danger mx-auto disabled">Submit</button>
+      </form>
+</div>
+    </section>
+    <!-- jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+</body>
+</html>

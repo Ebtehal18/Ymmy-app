@@ -1,0 +1,227 @@
+/* ^=====================general styling============================== */
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:#0D0D0D;
+    --white-color:#fff;
+    --sec-color: #f9f6f6ca;
+    --h2-color: #f9f6f6;
+    --form-control:#212529;
+    --form-placeholder: #ffffff51;
+    --form-contact:#212529a8;
+}
+body,html{
+    overflow-x: hidden;
+}
+body{
+    background-color:var(--main-color) ;
+}
+/* ^loading screen */
+.loading{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    background-color: var(--main-color);
+    z-index: 9999;
+}
+
+.loader {
+    display: inline-block;
+    color: var(--white-color);
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    animation: mulShdSpin 1.3s infinite linear;
+    transform: translateZ(0);
+  }
+  
+  @keyframes mulShdSpin {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 
+      2em -2em 0 0em, 3em 0 0 -1em, 
+      2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+      3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 
+      2em -2em 0 0, 3em 0 0 0.2em, 
+      2em 2em 0 0, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+       -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+       -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+       -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+      3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+      3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+  }
+    
+/* ^ ==========================aside===================================== */
+aside {
+    position: fixed;
+    left: 0;
+    z-index: 999;
+}
+ul li{
+    opacity: 0;
+    left: 0;
+    top:200px;
+    position: relative;
+}
+aside .links{
+    display: none;
+}
+aside nav{
+    flex-direction: column;
+    justify-content: space-between;
+
+    display: flex;
+    background-color: var(--main-color);
+}
+aside img{
+    width: 50px;
+}
+aside .fa-bars,
+aside .fa-xmark{
+    font-size: 2rem;
+    cursor: pointer;
+}
+aside .fa-xmark{
+    font-size: 2.5rem;
+}
+aside .social-copyright{
+    white-space: nowrap;
+}
+aside p.copyright{
+ 
+    max-width: 13.125rem;
+}
+
+/* ^ random meals styles */ 
+.layer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    background-color: var(--sec-color);
+    transition: all 0.5s;
+}
+.meal{
+    cursor: pointer;
+} 
+.meal:hover .layer{
+    top: 0;
+}
+h2{
+    font-size: 32px;
+ font-weight: 500;
+}
+.deatils p.desc{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.deatils span{
+
+    font-size: 1.75rem;
+    font-weight: 700;
+ 
+}
+.deatils span.alert{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+}
+.deatils .respies,
+.deatils .tags{
+    margin-bottom: 16px;
+}
+
+/* search styling */
+.form-control,
+.form-control:focus{
+    color: var(--white-color);
+    background-color: transparent;
+}
+.form-control::placeholder{
+    color: var(--form-placeholder);
+}
+.inputs{
+    gap: 20px;
+}
+.h2-area{
+    color: var(--h2-color);
+}
+.contact .form-control{
+    background-color: var(--white-color);
+    color:var(--form-control);
+}
+.contact .form-control::placeholder{
+    color:#212529a8;
+}
+.contact .container{
+    width: 65%;
+}
+.contact .btn{
+    width: fit-content;
+}
+
+
+@media screen and (max-width:767px) {
+    main .container,
+    #content .container,
+    .contact .container,
+    #search .container{
+        padding-left: 82px
+    }
+    h2{
+        margin-top: 8px;
+    }
+    .contact .container{
+        width: 100%;
+    }
+#search .inputs{
+    flex-direction: column;
+}
+}
