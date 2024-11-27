@@ -4,7 +4,7 @@ A web application that displays random meals and detailed information about each
 
 ## Live Demo
 
-Check out the live demo of the Yummy App [here](https://your-live-demo-url.com).
+Check out the live demo of the Yummy App [here]( https://ebtehal18.github.io/Ymmy-app/).
 
 ## Features
 
